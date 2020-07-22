@@ -21,8 +21,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.light,
-        primaryColor: Color.fromRGBO(250, 210, 248, 1),
-        accentColor: Color.fromRGBO(226, 22, 22, 0),
+        primaryColor: Color.fromRGBO(248, 248, 248, 1),
+        accentColor: Color.fromRGBO(248, 248, 248, 1),
 //        fontFamily: 'Georgia',
         textTheme: TextTheme(
           headline1: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
