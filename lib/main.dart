@@ -8,6 +8,7 @@ import 'package:customer_service/admin/building_page.dart';
 import 'package:customer_service/admin/room_page.dart';
 import 'package:customer_service/admin/rooms_page.dart';
 import 'package:customer_service/admin/settings_page.dart';
+import 'package:flutter/foundation.dart';
 
 void main() => runApp(MyApp());
 
@@ -22,13 +23,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.light,
         primaryColor: Color.fromRGBO(248, 248, 248, 1),
-        accentColor: Color.fromRGBO(248, 248, 248, 1),
-//        fontFamily: 'Georgia',
-        textTheme: TextTheme(
-          headline1: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
-          headline6: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
-          bodyText2: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
-        ),
+        //accentColor: Color.fromRGBO(248, 248, 248, 1),
+        accentColor: Color.fromRGBO(0, 191, 84, 1),
+        fontFamily: 'Georgia',
+//        textTheme: TextTheme(
+//          headline1: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
+//          headline6: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
+//          bodyText: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
+//        ),
       ),
       initialRoute: '/',
       routes: {

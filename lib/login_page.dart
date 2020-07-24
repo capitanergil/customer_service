@@ -13,8 +13,9 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.white,
-          title: Text('Customer Service'),
+          elevation: 10,
+          backgroundColor: Color.fromRGBO(10, 223, 104, 1),
+          title: Text('Customer Service', style: TextStyle(color: Colors.white),),
         ),
         body: SafeArea(
           child: Container(
@@ -28,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
                   borderRadius: BorderRadius.all(Radius.circular(4)),
                   boxShadow: [
                     BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
+                        color: Colors.black.withOpacity(0.5),
                         spreadRadius: 5,
                         blurRadius: 7,
                         offset: Offset(0, 3))
@@ -43,6 +44,26 @@ class _LoginPageState extends State<LoginPage> {
                           padding: const EdgeInsets.all(8.0),
                           child: TextFormField(
                             decoration: InputDecoration(
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(5),
+                                borderSide: BorderSide(
+                                  color: Colors.black
+                                )
+                              ),
+                                focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                    borderSide: BorderSide(
+                                        color: Colors.black45
+                                    )
+                                ),
+                              errorBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(5),
+                                borderSide: BorderSide(color: Colors.red)
+                              ),
+                              focusedErrorBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(5),
+                                borderSide: BorderSide(color: Colors.black45)
+                              ),
                               hintText: 'Username'
                             ),
                             validator: (value) {
@@ -57,6 +78,26 @@ class _LoginPageState extends State<LoginPage> {
                           padding: const EdgeInsets.all(8.0),
                           child: TextFormField(
                             decoration: InputDecoration(
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                    borderSide: BorderSide(
+                                        color: Colors.black
+                                    )
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                    borderSide: BorderSide(
+                                        color: Colors.black45
+                                    )
+                                ),
+                                errorBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                    borderSide: BorderSide(color: Colors.red)
+                                ),
+                                focusedErrorBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                    borderSide: BorderSide(color: Colors.black45)
+                                ),
                                 hintText: 'Password'
                             ),
                             validator: (value) {
@@ -70,6 +111,7 @@ class _LoginPageState extends State<LoginPage> {
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 16.0),
                           child: RaisedButton(
+                            elevation: 10,
                             onPressed: () {
                               // Validate returns true if the form is valid, or false
                               // otherwise.
@@ -79,7 +121,9 @@ class _LoginPageState extends State<LoginPage> {
                                     SnackBar(content: Text('Processing Data')));
                               }
                             },
-                            child: Text('Submit'),
+                            color: Theme.of(context).accentColor,
+                            child: Text('Submit', style: TextStyle(color: Colors.white),),
+
                           ),
                         ),
                       ]),
