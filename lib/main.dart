@@ -4,7 +4,7 @@ import 'package:customer_service/admin/owner_page.dart';
 import 'package:customer_service/admin/owners_page.dart';
 import 'package:customer_service/admin/add_owner_page.dart';
 import 'package:customer_service/admin/buildings_page.dart';
-import 'package:customer_service/admin/building_page.dart';
+import 'package:customer_service/admin/add_building_page.dart';
 import 'package:customer_service/admin/room_page.dart';
 import 'package:customer_service/admin/rooms_page.dart';
 import 'package:customer_service/admin/settings_page.dart';
@@ -24,8 +24,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.light,
         primaryColor: Color.fromRGBO(248, 248, 248, 1),
         //accentColor: Color.fromRGBO(248, 248, 248, 1),
-        accentColor: Color.fromRGBO(0, 191, 84, 1),
-        fontFamily: 'Georgia',
+        accentColor: Color.fromRGBO(60, 175, 80, 1),
 //        textTheme: TextTheme(
 //          headline1: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
 //          headline6: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),

@@ -1,3 +1,5 @@
+import 'package:customer_service/admin/add_owner_page.dart';
+import 'package:customer_service/admin/owners_page.dart';
 import 'package:flutter/material.dart';
 import 'package:customer_service/main.dart';
 
@@ -13,9 +15,11 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           elevation: 10,
-          backgroundColor: Color.fromRGBO(10, 223, 104, 1),
-          title: Text('Customer Service', style: TextStyle(color: Colors.white),),
+         // backgroundColor: Color.fromRGBO(10, 223, 104, 1),
+          backgroundColor: Colors.white,
+          title: Text('Customer Service', style: TextStyle(color: Theme.of(context).accentColor, fontWeight: FontWeight.bold),),
         ),
         body: SafeArea(
           child: Container(
@@ -68,7 +72,7 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                             validator: (value) {
                               if (value.isEmpty) {
-                                return 'Please enter some text';
+                                return 'Please enter username';
                               }
                               return null;
                             },
@@ -102,7 +106,7 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                             validator: (value) {
                               if (value.isEmpty) {
-                                return 'Please enter some text';
+                                return 'Please enter password';
                               }
                               return null;
                             },
@@ -120,6 +124,7 @@ class _LoginPageState extends State<LoginPage> {
                                 Scaffold.of(context).showSnackBar(
                                     SnackBar(content: Text('Processing Data')));
                               }
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => AddOwnerPage()));
                             },
                             color: Theme.of(context).accentColor,
                             child: Text('Submit', style: TextStyle(color: Colors.white),),
